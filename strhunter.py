@@ -9,7 +9,7 @@ import requests
 
 url = "https://zilyo.p.mashape.com/search"
 
-querystring = {"latitude":"38.889931","longitude":"-77.009003","maxdistance":"11.25","provider":"airbnb","sort":"high2low","resultsperpage":"1","page":"1"}
+querystring = {"latitude":"38.889931","longitude":"-77.009003","maxdistance":"11.25","provider":"airbnb","sort":"high2low","resultsperpage":"2","page":"1"}
 
 headers = {
     'x-mashape-key': "5BrRximyJgmshtkDZpAPKxGNpoPNp1n4MEHjsnSvvYjOBagtba",
@@ -37,4 +37,7 @@ import json
 parsed_json = json.loads(json_string)
 #parsed_json.keys()
 #print parsed_json
-print (parsed_json[u'propType'])
+print parsed_json[u'result'][0][u'priceRange'][0][u'monthly']
+print parsed_json [u'result'][1][u'priceRange'][0][u'monthly']
+
+
