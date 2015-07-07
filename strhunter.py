@@ -18,7 +18,7 @@ headers = {
 
 response = requests.request("GET", url, headers=headers, params=querystring)
 
-#def _get_paginated(self, url, params=None):
+# def _get_paginated(self, url, params=None):
 #     while True:
 #         page = self.get(url, params=querystring).json()
 #
@@ -31,13 +31,13 @@ response = requests.request("GET", url, headers=headers, params=querystring)
 #         else:
 #             break
 
-#print(response.text)
+# print(response.text)
 json_string=(response.text)
 import json
 parsed_json = json.loads(json_string)
-#parsed_json.keys()
-#print parsed_json
+# parsed_json.keys()
+# print parsed_json
 print parsed_json[u'result'][0][u'priceRange'][0][u'monthly']
 print parsed_json [u'result'][1][u'priceRange'][0][u'monthly']
 
-
+# github test line
